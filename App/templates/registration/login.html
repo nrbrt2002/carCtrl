@@ -1,0 +1,91 @@
+<style>
+    .shadow-wrap {
+        border-radius: 5px;
+        padding: 25px;
+        background-color: #F0F2FB;
+    }
+
+    .form-wrap {
+        background-color: #fff;
+        padding: 70px;
+    }
+
+    .form-wrap form * {
+        display: block;
+        width: 100%;
+    }
+
+    .form-wrap form label {
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 26px;
+    }
+
+    .form-wrap form input {
+        padding: 12px 20px;
+        border-radius: 5px;
+        border: 1px solid #DAE1F5;
+        background: #FFF;
+        color: #545D7A;
+    }
+
+    #id_username {
+        margin-bottom: 20px;
+    }
+
+    .form-wrap button {
+        border-radius: 5px;
+        background: #10182F;
+        color: #FFF;
+        cursor: pointer;
+        text-align: center;
+        font-size: 16px;
+        padding: 12px 68px;
+        font-weight: 700;
+        border: 1px solid transparent;
+        margin-top: 30px;
+        line-height: 26px;
+    }
+
+    .signup-link {
+        color: #10182F;
+        font-size: 15px;
+        margin-top: 20px;
+        text-align: center;
+        line-height: 25px;
+        display: block;
+        text-decoration: none;
+    }
+
+    .signup-link:hover {
+        text-decoration: underline;
+    }
+
+    .form-wrap button:hover {
+        background-color: #fff;
+        color: #10182F;
+        border-color: #10182F;
+
+    }
+</style>
+<center>
+    <div class="shadow-wrap text-dark" style="width: 30%;">
+
+        <div class="form-wrap">
+            <a href="/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-house"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                </svg>
+            </a>
+            <form method="POST" class="mx-auto">
+                <h2>Staff Login</h2>
+                {% csrf_token %}
+                {{form}}
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</center>
