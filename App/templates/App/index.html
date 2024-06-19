@@ -66,7 +66,8 @@ https://templatemo.com/tm-570-chain-app-dev
             <ul class="nav">
               <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
               <li>
-                <div class="gradient-button"><a id="modal_trigger" href="#modal"><i class="fa fa-sign-in-alt"></i> Sign
+                <div class="gradient-button"><a id="modal_trigger" href="{% url 'loginc'%}"><i
+                      class="fa fa-sign-in-alt"></i> Sign
                     In Now</a></div>
               </li>
             </ul>
@@ -80,94 +81,6 @@ https://templatemo.com/tm-570-chain-app-dev
     </div>
   </header>
   <!-- ***** Header Area End ***** -->
-
-  <div id="modal" class="popupContainer" style="display:none;">
-    <div class="popupHeader">
-      <span class="header_title">Login</span>
-      <span class="modal_close"><i class="fa fa-times"></i></span>
-    </div>
-
-    <section class="popupBody">
-      <!-- Social Login -->
-      <div class="social_login">
-        <form >
-          <label>Email</label>
-          <input type="email" name="email"/>
-          <br />
-
-          <label>Password</label>
-          <input type="password" />
-          <br />
-
-          <div class="checkbox">
-            <input id="remember" type="checkbox" />
-            <label for="remember">Is Staff</label>
-          </div>
-
-          <div class="action_btns">
-            <div class="one_half last"><a href="#" class="btn btn_red">Login</a></div>
-            <div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>
-          </div>
-        </form>
-
-        <a href="#" class="forgot_password">Forgot password?</a>
-      </div>
-
-      <!-- Username & Password Login form -->
-      <div class="user_login">
-        <form>
-          <label>Email / Username</label>
-          <input type="text" />
-          <br />
-
-          <label>Password</label>
-          <input type="password" />
-          <br />
-
-          <div class="checkbox">
-            <input id="remember" type="checkbox" />
-            <label for="remember">Remember me on this computer</label>
-          </div>
-
-          <div class="action_btns">
-            <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a>
-            </div>
-            <div class="one_half last"><a href="#" class="btn btn_red">Login</a></div>
-          </div>
-        </form>
-
-        <a href="#" class="forgot_password">Forgot password?</a>
-      </div>
-
-      <!-- Register Form -->
-      <div class="user_register">
-        <form>
-          <label>Full Name</label>
-          <input type="text" />
-          <br />
-
-          <label>Email Address</label>
-          <input type="email" />
-          <br />
-
-          <label>Password</label>
-          <input type="password" />
-          <br />
-
-          <div class="checkbox">
-            <input id="send_updates" type="checkbox" />
-            <label for="send_updates">Send me occasional email updates</label>
-          </div>
-
-          <div class="action_btns">
-            <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a>
-            </div>
-            <div class="one_half last"><a href="#" class="btn btn_red">Register</a></div>
-          </div>
-        </form>
-      </div>
-    </section>
-  </div>
 
   <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
     <div class="container">
@@ -209,7 +122,8 @@ https://templatemo.com/tm-570-chain-app-dev
         <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
           <h4>Amazing <em>Services &amp; Features</em> for you</h4>
           <img src="{% static 'assets/images/heading-line-dec.png' %}" alt="">
-          <p style="color: black;">Motor vehicles need regular safety inspections to remain on the road. You will be required to inspect your
+          <p style="color: black;">Motor vehicles need regular safety inspections to remain on the road. You will be
+            required to inspect your
             vehicle to ensure that the vehicle meets safety requirements and standards depending on the motor-vehicle
             use: every six (6) months for commercial moto-vehicles and every year for personal use motor vehicles. <br>
 
@@ -225,9 +139,11 @@ https://templatemo.com/tm-570-chain-app-dev
           <ul style="border-left: 4px solid; padding-left: 15px; color: black;">
             <li style="color: black;">To check if you don't have any unpaid traffic fine</li>
             <li style="color: black;">To book an appointment and pay a service fee</li>
-            <li style="color: black;">On the day of the inspection, arrive at the testing centre on time. If you are late, you will&nbsp; not
+            <li style="color: black;">On the day of the inspection, arrive at the testing centre on time. If you are
+              late, you will&nbsp; not
               be received unless you have justified reasons</li>
-            <li style="color: black;">To present proof payment, appointment, identity (National ID or resident Card), logbook (Carte Jaune),
+            <li style="color: black;">To present proof payment, appointment, identity (National ID or resident Card),
+              logbook (Carte Jaune),
               insurance and driving licence</li>
           </ul>
 
