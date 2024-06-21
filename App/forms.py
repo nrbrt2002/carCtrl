@@ -1,5 +1,5 @@
 from django import forms
-from App.models import Center, Owner
+from App.models import Center, Owner, Car
 
 class CenterForm(forms.ModelForm):
     class Meta:
@@ -16,6 +16,7 @@ class OwnerForm(forms.ModelForm):
     class Meta:
         model = Owner
         fields = '__all__'
+        exclude = ['is_active', 'is_staff', 'last_login', 'groups', 'is_superuser', 'user_permissions']
         widgets = {
             'names': forms.TextInput(attrs={'class': 'form-control'}),
             'email': forms.EmailInput(attrs={'class': 'form-control'}),
@@ -27,4 +28,15 @@ class OwnerForm(forms.ModelForm):
 class LoginOwnerForm(forms.Form):
     email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-control'}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control'}))
+    
+class CarForm(forms.ModelForm):
+    class Meta:
+        model = Car
+        fields = '__all__'
+        exclude = ['owner_id']
+        widgets = {
+            'plate': forms.TextInput(attrs={'class': 'form-control'}),
+            'model': forms.TextInput(attrs={'class': 'form-control'}),
+            'make': forms.TextInput(attrs={'class': 'form-control'}),
+        }
         

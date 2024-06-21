@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <title>Car Controll-Rwanda National Police</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!--
+
+TemplateMo 570 Chain App Dev
+
+https://templatemo.com/tm-570-chain-app-dev
+
+-->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-chain-app-dev.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animated.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="{% static 'assets/images/logo.png' %}" alt="Chain App Dev">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="{% url 'home' %}" class="active">Home</a></li>
+                            <li>
+                                <div class="gradient-button"><a id="modal_trigger" href="{% url 'loginc'%}"><i
+                                            class="fa fa-sign-in-alt"></i> Sign
+                                        In Now</a></div>
+                            </li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    {% if messages %}
+    {% for message in messages %}
+    {% if message.tags == 'error'%}
+    <div class="alert alert-danger" role="alert">
+        {{ message }}.
+    </div>
+    {% else %}
+    <div class="alert alert-success" role="alert">
+        {{ message }}.
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+    <center>
+        <div class="social_login" style="width: 40%; text-align: left;">
+            <h2>Staff Login</h2><br>
+            <form method="post">
+                {% csrf_token %}
+                {{form}}
+                <br>
+                <div class="action_btns" style="float: left;">
+                    <div class="one_half last"><button type="submit" class="btn btn_red">Login</button></div>
+                </div>
+            </form>
+            <br><br>
+            
+        </div>
+
+
+    </center>
+
+
+
+
+
+
+    <br>
+    <footer id="newsletter">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-widget">
+                        <h4>About Our Company</h4>
+                        <div class="logo">
+                            <img src="{% static 'assets/images/logo.png' %}" alt="">
+                        </div>
+                        <p>Schedule your car's technical control check today and drive worry-free tomorrow! We look
+                            forward to
+                            ensuring your vehicle's safety.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3"></div>
+                <div class="col-lg-5">
+                    <h4 style="color: aliceblue;">Leave us a message</h4><br>
+                    <form id="search" action="#">
+                        <input type="email" name="address" class="email" placeholder="Email Address..."
+                            autocomplete="on" required><br><br>
+                        <textarea name="message" id="" placeholder="Message..." rows="3" cols="50"></textarea>
+                        <button type="submit" class="main-button"><i class="fa fa-envelope"></i> Send</button>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'assets/js/animation.js' %}"></script>
+    <script src="{% static 'assets/js/imagesloaded.js' %}"></script>
+    <script src="{% static 'assets/js/popup.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+</body>
+
+</html>

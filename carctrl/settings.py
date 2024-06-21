@@ -131,3 +131,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = "admin-dashboard"
 LOGOUT_REDIRECT_URL = "home"
+
+
+AUTHENTICATION_BACKENDS = [
+    'App.backends.EmailBackendForOwners',
+    'App.backends.EmailBackendForAdmins',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+AUTH_USER_MODEL = 'App.Owner'

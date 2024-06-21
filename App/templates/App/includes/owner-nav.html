@@ -14,9 +14,9 @@
 
   <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/dashboard/">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css" />
 
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
   <link href="{% static 'assets/dist/css/bootstrap.min.css'%}" rel="stylesheet">
 
@@ -242,8 +242,8 @@
 
   <header class="navbar sticky-top bg-primary flex-md-nowrap p-0 shadow" data-bs-theme="dark">
     <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="/">CarCtrl-Owner</a>
-
-    <ul class="navbar-nav flex-row d-md-none">
+    <a href="" class="text-white">username</a>
+    <ul class="navbar-nav flex-row d-md-none"> 
       <li class="nav-item text-nowrap">
         <button class="nav-link px-3 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch"
           aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle search">
@@ -280,7 +280,8 @@
           <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="{% url 'admin-dashboard' %}">
+                <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page"
+                  href="{% url 'admin-dashboard' %}">
                   <svg class="bi">
                     <use xlink:href="#house-fill" />
                   </svg>
@@ -288,11 +289,11 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="{% url 'center'%}">
+                <a class="nav-link d-flex align-items-center gap-2" href="{% url 'owner-cars' %}">
                   <svg class="bi">
                     <use xlink:href="#file-earmark" />
                   </svg>
-                  Centers
+                  Cars
                 </a>
               </li>
               <li class="nav-item">
@@ -300,17 +301,10 @@
                   <svg class="bi">
                     <use xlink:href="#cart" />
                   </svg>
-                  Products
+                  Appointment
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#">
-                  <svg class="bi">
-                    <use xlink:href="#people" />
-                  </svg>
-                  Customers
-                </a>
-              </li>
+              
               <li class="nav-item">
                 <a class="nav-link d-flex align-items-center gap-2" href="#">
                   <svg class="bi">
@@ -385,14 +379,13 @@
                 </a>
               </li>
               <li class="nav-item">
-                <!-- <a class="nav-link d-flex align-items-center gap-2" href="{% url 'logout' %}"> -->
-                  
-                  <form method="post" action="{% url 'logout' %}" class="nav-link d-flex align-items-center gap-2">
+                <a class="nav-link d-flex align-items-center gap-2" href="{% url 'logoutc' %}">Logout
+                  <!-- <form method="post" action="{% url 'logout' %}" class="nav-link d-flex align-items-center gap-2">
                     
                     {% csrf_token %}
                     <button type="submit" class="btn btn-link"><svg class="bi"><use xlink:href="#door-closed" /></svg> Sign-Out</button>
-                </form>
-                <!-- </a> -->
+                </form> -->
+                </a>
               </li>
             </ul>
           </div>
